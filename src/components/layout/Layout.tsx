@@ -4,10 +4,10 @@ import {SideBar}  from "../SideBar";
 const Layout: React.FC = () => {
     return ( 
     <div className="container">
-      <section className="filter-bar">
+      <section className="sidebar">
         <SideBar/>        
       </section> 
-      <main className="filter-bar">
+      <main className="main">
         <Outlet/>
       </main>
     </div>);

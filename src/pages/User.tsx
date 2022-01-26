@@ -33,8 +33,9 @@ const User: React.FC = () => {
 
   return (
     <>
-     {error?null:<div>
-       <h2>Профиль пользователя</h2> <button onClick={()=>{setIsEdit(prev=>!prev)}}>Редактировать</button>
+     {error?null:<div className="user-edit__title">
+       <h2>Профиль пользователя</h2>
+       <button className="user-edit__btn" onClick={()=>{setIsEdit(prev=>!prev)}}>Редактировать</button>
        </div>}
 
      {error?<div>{error}</div>:

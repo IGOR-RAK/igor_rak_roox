@@ -40,7 +40,7 @@ export const UsersActionCreators = {
           const response = await UserService.getUsers();         
           dispatch(UsersActionCreators.setUsers(response.data));          
           dispatch(UsersActionCreators.setIsLoading(false));
-        }, 1000);
+        }, 500);
       } catch (e) {
         dispatch(
           UsersActionCreators.setError("При попытке соединения с сервером возникла ошибка ")

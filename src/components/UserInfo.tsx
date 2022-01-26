@@ -8,46 +8,48 @@ interface IUserInfo {
 }
 
 
+
+
 const UserInfo:React.FC<IUserInfo> =({user})=> {
 
-  
+   
   return (
     <div className='user-info'>
-    <div>
-        <p>Name</p>
-        <input type="text" value={user?.name} readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>Name</p>
+        <input className='user-info__input' type="text" value={user?.name} readOnly={true}/>
     </div>
-    <div>
-    <p>User Name</p>
-        <input type="text" value={user?.username} readOnly={true}/>
+    <div  className='user-info__item'>
+    <p className='user-info__subtitle'>User Name</p>
+        <input className='user-info__input' type="text" value={user?.username} readOnly={true}/>
         </div>
-    <div>
-        <p>E-mail</p>
-        <input type="text" value={user?.email} readOnly={true}/>
+    <div  className='user-info__item'>
+        <p className='user-info__subtitle'>E-mail</p>
+        <input className='user-info__input' type="text" value={user?.email} readOnly={true}/>
     </div>
-    <div>
-        <p>Street</p>
-        <input type="text" value={user?.address?.street} readOnly={true}/>
+    <div  className='user-info__item'>
+        <p className='user-info__subtitle'>Street</p>
+        <input className='user-info__input' type="text" value={user?.address?.street} readOnly={true}/>
     </div>
-    <div>
-        <p>City</p>
-        <input type="text" value={user?.address?.city} readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>City</p>
+        <input className='user-info__input' type="text" value={user?.address?.city} readOnly={true}/>
     </div>
-    <div>
-        <p>Zipe Code</p>
-        <input type="text" value={user?.address?.zipcode} readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>Zip Code</p>
+        <input className='user-info__input' type="text" value={user?.address?.zipcode} readOnly={true}/>
     </div>
-    <div>
-        <p>Phone</p>
-        <input type="text" value={user?.phone} readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>Phone</p>
+        <input className='user-info__input' type="text" value={user?.phone} readOnly={true}/>
     </div>
-    <div>
-        <p>Website</p>
-        <input type="text" value={user?.website} readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>Website</p>
+        <input className='user-info__input' type="text" value={user?.website} readOnly={true}/>
     </div>
-    <div>
-        <p>Comment</p>
-        <textarea   readOnly={true}/>
+    <div className='user-info__item'>
+        <p className='user-info__subtitle'>Comment</p>
+        <textarea className='user-info__textarea'  readOnly={true}/>
     </div>
      
     </div>

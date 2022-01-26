@@ -8,18 +8,18 @@ const SideBar:React.FC =() => {
   const{id} =useParams()
  
   return (
-    <>
-     <h3>Сортировка</h3>
+    <div className='sidebar__group'>
+     <h3 className='sidebar__title'>Сортировка</h3>
      {id?<div>
-        <button >по городу</button>
-        <button >по компании</button>
+        <button className='sidebar__btn'>по городу</button>
+        <button className='sidebar__btn'>по компании</button>
       </div>:
       <div>
-       <button onClick={()=>{sortByCity()}}>по городу</button>
-       <button onClick={()=>{sortByCompanyName()}}>по компании</button>
+       <button className='sidebar__btn' onClick={()=>{sortByCity()}}>по городу</button>
+       <button className='sidebar__btn' onClick={()=>{sortByCompanyName()}}>по компании</button>
       </div>}
     
-    </>
+    </div>
   );
 }
 

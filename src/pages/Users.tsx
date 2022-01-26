@@ -17,7 +17,7 @@ const Users: React.FC = () => {
 
   return (
     <>
-     <h2>Список пользователей</h2>
+     <h2 className="users__title">Список пользователей</h2>
 
      {error?<div>{error}</div>:
       isLoading?<div>
