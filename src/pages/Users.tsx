@@ -13,11 +13,11 @@ const Users: React.FC = () => {
     }
   , []);
   
-  const {users,error,isLoading} = useTypedSelector((state) => state.users);
-
+  const {users,error,isLoading} = useTypedSelector((state) => state.users);  // 
+   
   return (
     <>
-     <h2 className="users__title">Список пользователей</h2>
+     {error?null:<h2 className="users__title">Список пользователей</h2>}
 
      {error?<div>{error}</div>:
       isLoading?<div>
@@ -25,7 +25,16 @@ const Users: React.FC = () => {
       </div>:          
         <UserList users={users}/>      
      }
-
+     <div className="users__info">
+       <div>        
+       {users.length===1?"Найден ": "Найдено "} 
+       {users.length} 
+       {users.length===1?" пользователь":
+        users.length>1&&users.length<5?" пользователя":" пользователей"
+       }
+     
+     </div>
+     </div>
       
     </>
   );

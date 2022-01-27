@@ -13,5 +13,5 @@ export interface IUser {
     company: {
       name: string      
     };
-    comments?:string;
+    comment?:string;
   }

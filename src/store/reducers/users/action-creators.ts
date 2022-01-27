@@ -35,17 +35,15 @@ export const UsersActionCreators = {
       dispatch: AppDispatch
     ) => {
       try {
-        dispatch(UsersActionCreators.setIsLoading(true));
-        setTimeout(async () => {
-          const response = await UserService.getUsers();         
-          dispatch(UsersActionCreators.setUsers(response.data));          
-          dispatch(UsersActionCreators.setIsLoading(false));
-        }, 500);
+        dispatch(UsersActionCreators.setIsLoading(true));    
+        const response = await UserService.getUsers();         
+        dispatch(UsersActionCreators.setUsers(response.data));        
       } catch (e) {
         dispatch(
           UsersActionCreators.setError("При попытке соединения с сервером возникла ошибка ")
         );
-      }
+       
+      } finally { dispatch(UsersActionCreators.setIsLoading(false))}
     },
     
   };

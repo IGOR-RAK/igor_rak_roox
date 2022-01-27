@@ -2,7 +2,7 @@ import React from 'react';
 import { IUser } from "../models/IUser";
 import { useForm } from "react-hook-form";
 
-
+//Использую библиотеку react-hook-form,чтобы избежать лишних перерендеров и организовать  валидацию формы
 
 interface IEditUserInfo {
     user:IUser
@@ -92,8 +92,8 @@ const EditUserInfo:React.FC<IEditUserInfo> =({user})=> {
      <div className='user-info__item'>
         <p className='user-info__subtitle'>Comment</p>
         <textarea className='user-info__textarea'           
-            defaultValue={user?.comments}
-            {...register("comments")}
+            defaultValue={user?.comment}
+            {...register("comment")}
         />
     </div>
 
