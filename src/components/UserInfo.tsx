@@ -1,18 +1,14 @@
 import React from 'react';
 import { IUser } from "../models/IUser";
 
-
+//Здесь можно было бы зделать лучше. Как-то преобразовать nested объект в массив и размапить.Но...
 
 interface IUserInfo {
     user:IUser
 }
 
-
-
-
 const UserInfo:React.FC<IUserInfo> =({user})=> {
 
-   
   return (
     <div className='user-info'>
     <div className='user-info__item'>

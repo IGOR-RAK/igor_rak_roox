@@ -21,6 +21,8 @@ function compareByCity(a:IUser,b:IUser) {
     return 0
 }
 
+// Функции для сортировки 
+
 const initialState: UsersState = { 
   error: "",
   isLoading: false,

@@ -6,7 +6,7 @@ import { EditUserInfo } from "../components/EditUserInfo";
 import { UserInfo } from "../components/UserInfo";
 import { Spin } from "../components/ui/Spin";
 
-
+//Не использую здесь Redux, так как компоненты вложены в друг друга. Передачу данных легче организовать через props. И просто, чтобы показать другой подход.
 
 const User: React.FC = () => {
     const{id} = useParams()
@@ -34,7 +34,7 @@ const User: React.FC = () => {
   return (
     <>
      {error?null:<div className="user-edit__title">
-       <h2>Профиль пользователя</h2>
+       <div>Профиль пользователя</div>
        <button className="user-edit__btn" onClick={()=>{setIsEdit(prev=>!prev)}}>Редактировать</button>
        </div>}
 

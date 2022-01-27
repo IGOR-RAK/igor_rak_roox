@@ -4,6 +4,8 @@ import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useActions } from "../hooks/useActions";
 import { Spin } from "../components/ui/Spin";
 
+//Использую на этой странице(компоненте) Redux, так как кнопки для сортировки находятся изолировано в Layout
+
 
 
 const Users: React.FC = () => {

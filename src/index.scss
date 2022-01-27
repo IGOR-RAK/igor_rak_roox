@@ -1,3 +1,7 @@
+
+$btn-primary:#4B51EF;
+$border-color:lightgray;
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {  
   margin: 0;  
   padding: 0;  
@@ -7,10 +11,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   box-sizing: border-box; 
 }
 
-
-
 .container{
-  border: 1px solid lightgray;
+  border: 1px solid $border-color;
   width: 665px;
   margin: 0 auto;
   margin-top: 50px;
@@ -32,7 +34,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   &__btn{
     margin-top: 20px;
     height: 1.5rem;
-    background: #4B51EF;
+    background: $btn-primary;
     border: none;
     border-radius: 5px;
     color: white;
@@ -47,6 +49,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .main{
   padding: 20px 20px;
 }
+
 .users{
   &__info{
     font-size: 0.8rem;
@@ -100,39 +103,40 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
   &__to{
     text-decoration: none;
-    color: #4B51EF;
+    color: $btn-primary;
     font-size: 0.8rem;
     font-weight: 400;
   }
 
 }
 
-.user-edit__title{
-display: flex;
-justify-content: space-between;
-font-size: 1rem;
-font-weight: 500;
 
-}
-
-.user-edit__btn{
+.user-edit{
+  &__title{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;  
+  }
+  &__btn{
     height: 1.5rem;
-    background: #4B51EF;
+    background: $btn-primary;
     border: none;
     border-radius: 5px;
     color: white;
     padding: 0 10px;
     cursor: pointer;
-}
-
-.user-edit__btn:hover{
+  }  
+  &__btn:hover{
     text-decoration: underline;
+  }
+ 
 }
 
 .user-info{
   margin-top: 10px;
   padding: 20px 10px;
-  border: 1px solid lightgray;
+  border: 1px solid $border-color;
   border-radius: 10px;
   &__user-info__item{
     display: flex;
@@ -147,7 +151,7 @@ font-weight: 500;
     padding: 6px 10px;
     margin: 2px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: 4px;
     box-sizing: border-box;
     color: lightgray;
@@ -157,7 +161,7 @@ font-weight: 500;
     height: 4rem;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid $border-color;
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -166,11 +170,10 @@ font-weight: 500;
     background:  #52CF4F;
     border:none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
   }
   &__submit--error{
-    color: #fff;
-    
+    color: #fff;    
     background: #AFAFAF;
     border:none;
     border-radius: 5px;
@@ -178,16 +181,12 @@ font-weight: 500;
   }
 }
 
-@keyframes mymove {
-  50% {transform: rotate(180deg);}
-}
-
 .form__input--error,.form__input{
   width: 50%;
   padding: 6px 10px;
   margin: 2px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   border-radius: 4px;
   box-sizing: border-box;
   font-weight: 500;
@@ -199,3 +198,8 @@ font-weight: 500;
   border-color: #ca3448;
   box-shadow: 0 0 2px #ca3448;
 }
+
+@keyframes spin {
+  50% {transform: rotate(180deg);}
+}
+
